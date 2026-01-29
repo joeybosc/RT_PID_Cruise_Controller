@@ -12,6 +12,7 @@ HOW TO RUN
 	
 		/FreeRTOS/Demo/PID_Controller
 
+	Then compile and run from there.
 	Additional configuration may be required. 
 	
 INTERFACE MANUAL
