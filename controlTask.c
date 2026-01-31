@@ -114,7 +114,7 @@ static void control_task(void *params) {
         float throttle = control_term / 100.0f;
 
         //clamp the control signal to allowed range (shouldn't be necessary if antiwindup limits are set properly, but keep for robustness)
-        if (throttle < 0.0f) {throttle = 0.0f;}
+        if (throttle < -1.0f) {throttle = -1.0f;}
         if (throttle > 1.0f) {throttle = 1.0f;}
 
         //update throttle 
