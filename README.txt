@@ -22,7 +22,7 @@ INTERFACE MANUAL
 
 	Vehicle Parameters:
 		Defaults: Mass = 1000.0, Drag = 0.5, Engine Force = 2000.0, Slope = 0.0
-		Suggested ranges: Mass = [500.0, 10000.0], Drag = [0.0, 1.0], Engine Force = [1000.0, 10000.0], Slope = [-10.0, 10.0]
+		Suggested ranges: Mass = [500.0, 10000.0], Drag = [0.1, 1.0], Engine Force = [1000.0, 10000.0], Slope = [-10.0, 10.0]
 
 	Stress Testing:
 		Recommended Test Rate: 10Hz
@@ -36,3 +36,6 @@ TASK STATISTICS
 NOTES:
 Why use atomic shared memory rather than FreeRTOS queues?
 Since only the most recent update matters, and updates are infrequent compared to the control loop frequency, it's faster to use atomic memory swap. Queues may be better for multiple updates coming in at once since they can preserve message order, but they require context switching from the scheduler which uses more overhead than DMA. 
+
+Memory allocation:
+Heap memory management scheme used is FreeRTOS heap_1.c, which is the simplest implementation available. Memory is allocated, but never freed. This works and is always deterministic as long as tasks, queues, mutexes, and sempahores are never deleted. 
