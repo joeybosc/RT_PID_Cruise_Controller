@@ -30,7 +30,7 @@ INTERFACE MANUAL
 		Duration doesn't matter since the control task always preempts the server. 
 
 TASK STATISTICS
-	WCET: 288us (2.88% usage)
+	WCET: 288us (2.88% usage) after 50000 iterations
 	Jitter: +- 1 OS tick (on older Intel Unix machine, =1ns. On an M1 Silicon machine, may vary, but in a similar range, which is negligible for this application.)
 
 NOTES:
