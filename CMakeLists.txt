@@ -9,8 +9,8 @@ add_compile_options( -Wall -Wextra -Wpedantic )
 set(CMAKE_C_FLAGS_RELEASE "-O3")
 set(CMAKE_C_FLAGS_DEBUG "-O0 -g3")
 
-set( FREERTOS_KERNEL_PATH "../../Source" )
-set( FREERTOS_PLUS_TRACE_PATH "../../../FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace" )
+set( FREERTOS_KERNEL_PATH "../FreeRTOS/FreeRTOS/Source" )
+set( FREERTOS_PLUS_TRACE_PATH "../FreeRTOS/FreeRTOS-Plus/Source/FreeRTOS-Plus-Trace" )
 
 # Add the freertos_config for FreeRTOS-Kernel
 add_library( freertos_config INTERFACE )
@@ -46,9 +46,9 @@ target_include_directories( pid2
     PRIVATE
         ${CMAKE_CURRENT_LIST_DIR}
         ${CMAKE_CURRENT_LIST_DIR}/../Common/include
-        ${FREERTOS_PLUS_TRACE_PATH}/Include
-        ${FREERTOS_PLUS_TRACE_PATH}/streamports/File/include
-        ${FREERTOS_PLUS_TRACE_PATH}/streamports/File/config
+        #${FREERTOS_PLUS_TRACE_PATH}/Include
+        #${FREERTOS_PLUS_TRACE_PATH}/streamports/File/include
+        #${FREERTOS_PLUS_TRACE_PATH}/streamports/File/config
 )
 
 

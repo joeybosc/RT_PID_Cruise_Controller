@@ -8,12 +8,16 @@ SYSTEM REQUIREMENTS:
 	FreeRTOS 202406.04 LTS
 
 HOW TO RUN
-	Place the project folder within the Demo folder in your FreeRTOS install, like so:
+	Clone the repository into the same directory as the FreeRTOS installation:
 	
-		/FreeRTOS/Demo/PID_Controller
+		root
+		├---FreeRTOS/
+		|	└----FreeRTOS/...
+		|	└----etc...
+		└---RT_PID_Cruise_Controller/
 
 	Then compile and run from there.
-	Additional configuration may be required. 
+	Additional configuration may be required, let me know if you have trouble with compiling or running the program. 
 	
 INTERFACE MANUAL
 	PID Parameters:
